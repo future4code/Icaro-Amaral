@@ -56,7 +56,7 @@ div img {
 }
 
 .icone {
-    height: 15px;
+    height: 30px;
     width: 30px;
     background-color: white;
 }
@@ -146,4 +146,9 @@ img{
 }
 button:hover{
     background-color: grey;
+}
+input{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: opx;
 }
