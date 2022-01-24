@@ -12,5 +12,3 @@ function checaRenovacaoRG(atualAno:number, nascimentoAno:number, emissaoAno:numb
 
     return (cond1 || cond2 || cond3)
  }
-
- console.log(checaRenovacaoRG(Number(process.argv[2]), Number(process.argv[3]), Number(process.argv[4]))) 

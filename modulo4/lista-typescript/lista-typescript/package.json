@@ -1,18 +1,13 @@
 {
-  "name": "introducao-typescript",
+  "name": "lista-typescript",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node ./build/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node ./build/exercicio-11.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "typescript": "^4.5.4"
-  },
-  "devDependencies": {
-    "@types/node": "^17.0.10"
-  }
+  "license": "ISC"
 }

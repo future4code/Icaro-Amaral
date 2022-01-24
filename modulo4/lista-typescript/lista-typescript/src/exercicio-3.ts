@@ -14,4 +14,4 @@ const getMovies = (name:string, date:number, movieType:GENERO, score?:number) =>
     })
 }
 
-getMovies('Nosferatu', 1921, GENERO.TERROR) 
+getMovies('Necronomicon', 1993, GENERO.TERROR) 
