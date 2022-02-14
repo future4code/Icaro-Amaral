@@ -1,11 +1,18 @@
-import { app } from './app';
-import { addNewProduct } from './endpoints/addNewProduct';
-import { addNewUser } from './endpoints/addNewUser';
-import { getAllProducts } from './endpoints/getAllProducts';
-import { getAllUsers } from './endpoints/getAllUsers';
+import { app } from "./app";
 
-app.post('/users', addNewUser);
-app.post('/products', addNewProduct);
+import { addNewProduct } from "./API/Product/addNewProduct";
+import { getAllProducts } from "./API/Product/getAllProducts";
+import { addRegisterPurchase } from "./API/Purchases/addRegisterPurchase";
+import { deleteProductById } from "./API/Product/deleteProductById";
+import { changeProductPriceWithId } from "./API/Product/changeProductPriceWithId";
+import { getAllPurchases } from "./API/Purchases/getAllPurchases";
+import { deletePurchaseById } from "./API/Purchases/deletePurchadeById";
 
-app.get('/users', getAllUsers);
-app.get('/products', getAllProducts);
+
+app.get('/purchases', getAllPurchases)
+app.post('/purchases', addRegisterPurchase)
+app.delete('/purchages/:purchase_id', deletePurchaseById) 
+app.get('/products', getAllProducts)
+app.post('/products', addNewProduct)
+app.put('/products/editprice/:product_id', changeProductPriceWithId)
+app.delete('/products/:id', deleteProductById)
