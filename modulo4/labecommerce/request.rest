@@ -1,0 +1,30 @@
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "name": "Alpha Test",
+    "email": "alphatest@email.com",
+    "password":"987456"
+}
+
+
+###
+
+POST http://localhost:3001/products
+Content-Type: application/json
+
+{
+    "name": "Necronomicon",
+    "price": 50.00,
+    "imageUrl": "https://igec.com.br/wp-content/uploads/2021/05/f9ff951a498b0d9ea17299737464dc1b_nec4.jpg"
+}
+
+###
+
+GET http://localhost:3001/users
+Content-Type: application/json
+
+###
+
+GET http://localhost:3001/products
+Content-Type: application/json
