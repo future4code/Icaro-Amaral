@@ -1,8 +1,8 @@
-import express from "express";
-import { app } from "..";
-import { UserController } from "../API/Controller/userController";
+import express from 'express';
+import { UserControler } from '../Controller/userController';
 
-export const userRouter = express.Router()
+export const userRouter = express.Router();
+const userControlller = new UserControler();
 
-userRouter.post('/signup', new UserController().signup)
-userRouter.post('/login', new UserController().login) 
+userRouter.post('/signup', userControlller.signUp);
+userRouter.post('/login', userControlller.login);

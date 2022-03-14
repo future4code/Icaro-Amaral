@@ -1,6 +1,7 @@
-export type Type_User = {
-    id: string
-    name: string
-    email: string
-    password: string
-} 
+export type userData = {
+    name: string;
+    email: string;
+    password: string;
+  };
+  
+  export type user = userData & { id: string };

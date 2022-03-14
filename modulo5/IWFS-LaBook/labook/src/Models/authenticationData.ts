@@ -1,3 +1,3 @@
-export type autheticationData = {
-    id: string
-} 
+export type authenticationData = {
+    id: string;
+  };

@@ -1,23 +1,23 @@
-import { Inter_PostRepository } from "../Interface/interface_PostRepository";
-import { Type_Post } from "../Models/typePost";
-import { BaseDatabase } from "./connectionData";
+import { post } from '../Models/typePost';
+import { BaseDataBase } from './connectionData';
 
+export class PostDataBase extends BaseDataBase {
+  createPost = async (post: post) => {
+    await BaseDataBase.connection('labook_posts').insert({
+      id: post.id,
+      photo: post.photo,
+      description: post.description,
+      type: post.type,
+      created_at: post.createdAt,
+      author_id: post.authorId,
+    });
+  };
 
-export class PostDatabase extends BaseDatabase implements Inter_PostRepository{
-    private static TABLE_NAME: string = "labook_posts"
+  getPost = async (id: string) => {
+    const post: any = await BaseDataBase.connection('labook_posts')
+      .select('*')
+      .where({ id });
 
-    async createNewPost(post: Type_Post): Promise<void> {
-        await this.connectionData()
-            .into(PostDatabase.TABLE_NAME)
-            .insert(post)
-    }
-
-    async findById(id: string): Promise<Type_Post | null> {
-        const results: any = await this.connectionData()
-            .into(PostDatabase.TABLE_NAME)
-            .select("*")
-            .where({ id: id })
-
-            return results.length ? results[0] : null
-    }
-} 
+    return post[0];
+  };
+}

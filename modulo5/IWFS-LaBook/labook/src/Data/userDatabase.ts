@@ -1,24 +1,21 @@
-import { Inter_UserRepository } from "../Interface/interface_UserRepository";
-import { Type_User } from "../Models/typeUser";
-import { BaseDatabase } from "./connectionData";
+import { user } from '../Models/typeUser';
+import { BaseDataBase } from './connectionData';
 
+export class UserDataBase extends BaseDataBase {
+  signupUser = async (user: user) => {
+    await BaseDataBase.connection('labook_users').insert({
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      password: user.password,
+    });
+  };
 
-export class UserDatabase extends BaseDatabase implements Inter_UserRepository {
-    private static TABLE_NAME: string = "labook_users"
+  selectUserByEmail = async (email: string) => {
+    const user: any = await BaseDataBase.connection('labook_users')
+      .select('*')
+      .where({ email });
 
-    async createNewUser(user: Type_User): Promise<void> {
-        await this.connectionData()
-            .into(UserDatabase.TABLE_NAME)
-            .insert(user)
-    }
-
-    async findByEmail (email: string) {
-        const results: Type_User[] = await this.connectionData()
-            .into(UserDatabase.TABLE_NAME)
-            .select("*")
-            .where( {email: email} )
-
-            return results.length ? results[0] : null
-
-    }
-} 
+    return user[0];
+  };
+}

@@ -1,7 +1,8 @@
-import express from "express"
-import { PostController } from "../API/Controller/postController"
+import express from 'express';
+import { PostController } from '../Controller/postController';
 
-export const postRouter = express.Router()
+export const postRouter = express.Router();
+const postControlller = new PostController();
 
-postRouter.get('/:id', new PostController().getPostById)
-postRouter.post('/create', new PostController().createNewPost)
+postRouter.post('/create', postControlller.createPost);
+postRouter.get('/:id', postControlller.getPostById);
