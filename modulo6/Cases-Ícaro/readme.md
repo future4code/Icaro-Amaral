@@ -1,0 +1,1 @@
+## Case escolhido Brainn (React + Typescript opcional) - Frontend
