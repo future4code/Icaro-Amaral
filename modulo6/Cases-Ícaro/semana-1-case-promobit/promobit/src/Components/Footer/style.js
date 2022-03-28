@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledFooter = styled.div`
-/* background-color: red; */
+/* background-color: #00008B; */
     display: flex;
     height: 2rem;
     min-width: 35vw;

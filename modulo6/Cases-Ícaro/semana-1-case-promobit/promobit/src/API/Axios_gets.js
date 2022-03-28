@@ -4,7 +4,7 @@ import { URL_BASE } from "../Constants/URL_BASE"
 
 
 export const getPopularMovies = (set_data, page) => {
-    const url = `${URL_BASE}popular?${API_KEY}&language=pt-BR&page=${page}`
+    const url = `${URL_BASE}popular?${API_KEY}&language=en&page=${page}`
 
     axios.get(url)
         .then((resp) => {
@@ -16,7 +16,7 @@ export const getPopularMovies = (set_data, page) => {
 }
 
 export const getMovieDetailts = (set_data, id) => {
-    const url = `${URL_BASE}${id}?${API_KEY}&language=pt-BR&page=1`
+    const url = `${URL_BASE}${id}?${API_KEY}&language=en&page=1`
 
     axios.get(url)
         .then((resp) => {
@@ -28,7 +28,7 @@ export const getMovieDetailts = (set_data, id) => {
 }
 
 export const getMovieCredits = (set_data, id) => {
-    const url = `${URL_BASE}${id}/credits?${API_KEY}&language=pt-BR`
+    const url = `${URL_BASE}${id}/credits?${API_KEY}&language=en`
 
     axios.get(url)
         .then((resp) => {
@@ -40,7 +40,7 @@ export const getMovieCredits = (set_data, id) => {
 }
 
 export const getMovieVideos = (set_data, id) => {
-    const url = `${URL_BASE}${id}/videos?${API_KEY}&language=pt-BR`
+    const url = `${URL_BASE}${id}/videos?${API_KEY}&language=en`
 
     axios.get(url)
         .then((resp) => {
@@ -57,7 +57,7 @@ export const getMovieVideos = (set_data, id) => {
 }
 
 export const getMovieList = (set_data, id) => {
-    const url = `${URL_BASE}${id}/recommendations?${API_KEY}&language=pt-BR`
+    const url = `${URL_BASE}${id}/recommendations?${API_KEY}&language=en`
 
     axios.get(url)
         .then((resp) => {

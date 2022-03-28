@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
 import { getMovieCredits, getMovieDetailts, getMovieList, getMovieVideos } from "../../API/Axios_gets"
 import { CompDetails } from "../../Components/Details"
-import { API_KEY } from "../../Constants/API_KEY"
 import GlobalStateContext from "../../Global/GlobalStateContext"
 import { changePage } from "../../Router/routerGPS"
 import { convertDate } from "../../Utilities/convertDate"
@@ -74,7 +73,7 @@ export const PageDetails = () => {
             <h2 style={{marginLeft: '2rem', marginBottom: '1rem'}}> Trailer </h2>
             {renderedTrailer}
 
-            <h2 style={{marginLeft: '2rem', marginBottom: '1rem'}}> Recomendações </h2>
+            <h2 style={{marginLeft: '2rem', marginBottom: '1rem'}}> Recomendations </h2>
 
             <StyledRecomendations>
                 {renderedRecomendations}

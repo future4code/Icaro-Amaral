@@ -19,7 +19,7 @@ export const CompHeader = () => {
                 <div onMouseLeave={() => set_icaro(false)} className="icaro">
                     <span onClick={() => {set_icaro(!icaro)}}> 
                         {icaro ?
-                        <a href="https://www.linkedin.com/in/icaro-ferreira-63357994/" target="_blank"><ion-icon name="logo-linkedin" /></a>
+                        <a href="https://media-exp1.licdn.com/dms/image/C5603AQGxRdROyG7gqA/profile-displayphoto-shrink_800_800/0/1642643467566?e=1654128000&v=beta&t=Kdw0Khj-UfWZJZaTkifwZkSbkupCNELkiAIUMjQkUm4" target="_blank"><ion-icon name="foto" /></a>
                         :
                         <></>    
                     }

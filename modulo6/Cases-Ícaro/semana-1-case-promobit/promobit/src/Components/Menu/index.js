@@ -5,7 +5,7 @@ export const CompMenu = () => {
     return(
         <StyledMenu>
             <div className="menu-text">
-                <h1>Milhões de filmes, séries e pessoas para descobrir. Explore Já.</h1>
+                <h1>Welcome. Millions of movies, Tv shows and people to discover. Explore now.</h1>
             </div>
 
             <div className="menu-setup">
@@ -16,28 +16,28 @@ export const CompMenu = () => {
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Ação
+                        Action
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Aventura
+                        Adventure
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Animação
+                        Animation
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Comédia
+                        Comedy
                     </span>
                 </label>
 
@@ -51,70 +51,70 @@ export const CompMenu = () => {
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Documentário
+                        Documentary
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Drama
+                        Thriller
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Família
+                        Family
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Faroeste
+                        Fantasy
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Fantasia
+                        War Movies
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Guerra
+                        B Terror
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        História
+                        History
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Terror
+                        Horror
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Música
+                        Musical
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Mistério
+                        Mistery
                     </span>
                 </label>
 
@@ -128,21 +128,21 @@ export const CompMenu = () => {
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Ficção Científica
+                        Science Fiction
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Cinema TV
+                        Oscar Winning Movies
                     </span>
                 </label>
 
                 <label>
                     <input type={'checkbox'}/>
                     <span className="checked-span">
-                        Thriller
+                        Anime
                     </span>
                 </label>
 
