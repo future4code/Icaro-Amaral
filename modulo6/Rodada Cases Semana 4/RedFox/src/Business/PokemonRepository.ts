@@ -1,4 +1,4 @@
-import { PokemonInfo } from "../model/Pokemon"
+import { PokemonInfo } from "../Model/Pokemon"
 
 export interface PokemonRepository {
     getAllPokemons(limit: number, offset: number): Promise<any[] | null>

@@ -1,0 +1,9 @@
+POST http://localhost:3000/user/signup
+Content-Type: application/json
+
+{
+    "name": "Icaro",
+    "email": "icarofa1987@gmail.com",
+    "password": "labenu123",
+    "role": "NORMAL"
+}

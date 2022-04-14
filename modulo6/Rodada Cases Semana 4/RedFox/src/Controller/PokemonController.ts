@@ -1,14 +1,13 @@
 import { Request, Response } from "express";
-import { PokemonBusiness } from "../business/PokemonBusiness";
-import { PokemonDatabase } from "../data/PokemonDatabase";
-import { CustomError } from "../error/CustomError";
+import { PokemonBusiness } from "../Business/PokemonBusiness";
+import { PokemonDatabase } from "../Data/PokemonDatabase";
+import { CustomError } from "../Error/CustomError";
 
 export class PokemonController {
 
     constructor(
         private pokemonsBusiness: PokemonBusiness
     ) {
-        // this.pokemonsBusiness =  new PokemonBusiness( new PokemonDatabase)
     }
     getAllPokemons = async (req: Request, res: Response) => {
         const limit = req.query.limit || 20

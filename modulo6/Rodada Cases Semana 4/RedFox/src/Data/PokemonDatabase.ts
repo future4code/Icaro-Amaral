@@ -1,5 +1,5 @@
-import { PokemonRepository } from "../business/PokemonRepository";
-import { CustomError } from "../error/CustomError";
+import { PokemonRepository } from "../Business/PokemonRepository";
+import { CustomError } from "../Error/CustomError";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class PokemonDatabase extends BaseDatabase implements PokemonRepository {

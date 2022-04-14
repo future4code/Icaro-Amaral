@@ -1,5 +1,5 @@
-import { PokemonDatabase } from "../data/PokemonDatabase"
-import { CustomError } from "../error/CustomError"
+import { PokemonDatabase } from "../Data/PokemonDatabase"
+import { CustomError } from "../Error/CustomError"
 
 export class PokemonBusiness {
     constructor(
