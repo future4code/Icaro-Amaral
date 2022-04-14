@@ -1,19 +1,12 @@
-import app from "./app";
-import { PokemonBusiness } from "./Business/PokemonBusiness";
-import { PokemonController } from "./Controller/PokemonController";
-import { PokemonDatabase } from "./Data/PokemonDatabase";
-import { routerPoke } from "./Router/Router";
+import app from './app'
+import { PokemonBusiness } from './business/pokemonbusiness'
+import { PokemonController } from './controller/pokemoncontroller'
+import { PokemonDataBase } from './data/pokemondatabase'
 
 const pokemonController = new PokemonController(
-    new PokemonBusiness(
-        new PokemonDatabase()
-    ))
+    new PokemonBusiness(new PokemonDataBase()),   
+)
 
-app.use("/pokemon", routerPoke)
-
-
-app.get("/pokemon/name", pokemonController.getPokemonByName)
-app.get("/pokemon/generation", pokemonController.getPokemonByGeneration)
-app.get("/pokemon/type", pokemonController.getPokemonByType)
-app.get("/pokemon/id", pokemonController.getPokemonById)
-app.get("/pokemon/legendary", pokemonController.getPokemonLegendary) 
+app.get('/pokemons', pokemonController.getAllPokemons)
+app.get('/pokemon/name/:name', pokemonController.getPokemonByname)
+app.get('/pokemon/id/:id', pokemonController.getPokemonById) 
